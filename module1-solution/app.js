@@ -24,7 +24,7 @@ function LunchCheckController($scope) {
     var str = ($scope.list).split(',');
     var filtered_values = str.filter(function (e) {return e != null && e.trim() != '';});
     var n_array = filtered_values.length;
-    if ($scope.list.trim() == ""){
+    if ($scope.list.trim() == "" || n_array == 0){
       message = "Please enter data first";
     }
     else if (n_array <= 3) {
